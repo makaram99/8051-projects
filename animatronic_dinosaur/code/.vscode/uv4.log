@@ -1,0 +1,16 @@
+Build target '8052'
+compiling dinosaur.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CUTEOS_TASKREMOVE?CUTEOS
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CUTEOS_SETTICKTIME?CUTEOS
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CUTEOS_GETTICKTIME?CUTEOS
+
+Program Size: data=98.0 xdata=0 code=1802
+creating hex file from ".\Objects\animatronics_dinosaur"...
+".\Objects\animatronics_dinosaur" - 0 Error(s), 3 Warning(s).
+Build Time Elapsed:  00:00:00

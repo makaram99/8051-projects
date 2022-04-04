@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,117,69,149"/>
+<area shape="rect" id="node2" href="$cute_o_s_8h.html#a538cb1529929abdc516dbc5a23bf41fd" title="Sets up Timer 2 to drive the simple EOS." alt="" coords="155,5,278,37"/>
+<area shape="rect" id="node3" href="$cute_o_s_8h.html#a90f66f4ffbd452ceb65c8968caada76f" title="The OS enters &#39;idle mode&#39; between clock ticks to save power." alt="" coords="147,61,286,93"/>
+<area shape="rect" id="node4" href="$cute_o_s_8h.html#a7d3052acc66fae6a67b7cf7ccbf3d8d4" title="Create a task with the given task function and the given tick time." alt="" coords="117,117,316,149"/>
+<area shape="rect" id="node5" href="$dinosaur_8h.html#a4e21f7574461ac80e489ec1b4ce49638" title="Initialize the dinosaur system according to the configurations in the DINOSAUR_CONFIGS_t structure." alt="" coords="137,173,297,205"/>
+<area shape="rect" id="node6" href="$dinosaur_8h.html#abbe7a274bd18cf27bd2ffefa450d9b70" title=" " alt="" coords="117,229,316,261"/>
+</map>
