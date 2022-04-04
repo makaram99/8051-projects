@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "washer_cfg.h": "c",
+        "washer_private.h": "c"
+    }
+}

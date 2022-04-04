@@ -1,0 +1,10 @@
+<map id="code/src/washer.c" name="code/src/washer.c">
+<area shape="rect" id="node1" title="This is a washer animation system." alt="" coords="345,5,524,37"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,85,93,117"/>
+<area shape="rect" id="node3" href="$_s_t_d___t_y_p_e_s_8h.html" title="Standard data types For 8051 Microcontrollers." alt="" coords="117,85,269,117"/>
+<area shape="rect" id="node4" href="$main_8h.html" title="Project Header for main.c." alt="" coords="293,85,373,117"/>
+<area shape="rect" id="node5" href="$port_8h.html" title="Port Header file for 8052 microcontroller." alt="" coords="398,85,471,117"/>
+<area shape="rect" id="node6" href="$washer_8h.html" title="Dinosaur Animation System interfaces header file. See washer.c for more details." alt="" coords="496,85,597,117"/>
+<area shape="rect" id="node7" href="$washer__cfg_8h.html" title="Washer Machine System interfaces header file. See washer.c for more details." alt="" coords="621,85,760,117"/>
+<area shape="rect" id="node8" href="$washer__private_8h.html" title="This is a private header file for the washer class." alt="" coords="784,85,955,117"/>
+</map>

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "washing_machine.h": "c",
+        "washing_machine_cfg.h": "c"
+    }
+}

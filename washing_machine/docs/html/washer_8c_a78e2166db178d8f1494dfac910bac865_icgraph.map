@@ -1,0 +1,4 @@
+<map id="WASHER_Init" name="WASHER_Init">
+<area shape="rect" id="node1" title="Initialize the washer system according to the configurations in the WASHER_CONFIGS_t structure." alt="" coords="117,5,260,37"/>
+<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title=" " alt="" coords="5,5,69,37"/>
+</map>
