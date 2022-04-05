@@ -47,7 +47,7 @@ You can test it **without any Hardware**, it can be simulated as will be discuss
 
 ## 🛠️ Development Tools Required
 
-Read this [guide](https://github.com/makaram99/8051-projects/tools.md) to know what tools are required to develop this project.
+Read this [guide](https://github.com/makaram99/8051-projects/blob/master/tools.md) to know what tools are required to develop this project.
 
 ## Project Hierarchy
 
