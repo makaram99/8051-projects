@@ -29,7 +29,7 @@ So, before using any of the projects, I recommend reading the README.md file ins
 
 ## 🛠️ Development Tools Required
 
-In order to use, develop, simulate any of these projects, read this [guide](https://github.com/makaram99/8051-projects/tools.md) to know what tools are required before you start.
+In order to use, develop, simulate any of these projects, read this [guide](https://github.com/makaram99/8051-projects/blob/master/tools.md) to know what tools are required before you start.
 
 ---
 
