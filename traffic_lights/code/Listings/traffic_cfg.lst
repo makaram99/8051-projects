@@ -1,0 +1,47 @@
+C51 COMPILER V9.60.0.0   TRAFFIC_CFG                                                       04/05/2022 01:44:54 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE TRAFFIC_CFG
+OBJECT MODULE PLACED IN .\Objects\traffic_cfg.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE src\traffic_cfg.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\include) DEBUG OBJEC
+                    -TEXTEND PRINT(.\Listings\traffic_cfg.lst) OBJECT(.\Objects\traffic_cfg.obj)
+
+line level    source
+
+   1          /***************************************************************************
+   2           * @file    traffic_cfg.c
+   3           * @author  Mahmoud Karam (ma.karam272@gmail.com)
+   4           * @brief   Configurations of Traffic Light System.
+   5           * @version 1.0.0
+   6           * @date    2022-03-22
+   7           * @copyright Copyright (c) 2022
+   8           ***************************************************************************/
+   9          #include "STD_TYPES.h"
+  10          #include "Main.h"
+  11          #include "traffic.h"
+  12          #include "traffic_cfg.h"
+  13          
+  14          /*-------------------------------------------------------------------------*/
+  15          /*                YOU CAN CHANGE THE FOLLOWING PARAMETERS                                  */
+  16          /*-------------------------------------------------------------------------*/
+  17          /*!< Traffic Light System pins connections. */
+  18          TRAFFIC_CONFIGS_t TRAFFIC_Configs = {
+  19              TRAFFIC_DURATION_RED,
+  20              TRAFFIC_DURATION_AMBER,
+  21              TRAFFIC_DURATION_GREEN,
+  22              TRAFFIC_DURATION_RED_AMBER,
+  23          };
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

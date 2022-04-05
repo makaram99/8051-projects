@@ -1,0 +1,616 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/05/2022  01:44:54  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\cuteOS.obj, .\Objects\main.obj, .\Objects\traffic.obj, .\Ob
+>> jects\traffic_cfg.obj TO .\Objects\traffic_lights PRINT (.\Listings\traffic_lights.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\cuteOS.obj (CUTEOS)
+  .\Objects\main.obj (MAIN)
+  .\Objects\traffic.obj (TRAFFIC)
+  .\Objects\traffic_cfg.obj (TRAFFIC_CFG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ULDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ICALL)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LIMUL)
+
+
+LINK MAP OF MODULE:  .\Objects\traffic_lights (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0040H     UNIT         ?DT?CUTEOS
+            DATA    0048H     0008H     UNIT         _DATA_GROUP_
+            DATA    0050H     0005H     UNIT         ?DT?_CUTEOS_TASKREMOVE?CUTEOS
+            DATA    0055H     0004H     UNIT         ?DT?TRAFFIC_CFG
+            DATA    0059H     0003H     UNIT         ?DT?_CUTEOS_GETTICKTIME?CUTEOS
+            DATA    005CH     0003H     UNIT         ?DT?TRAFFIC
+            DATA    005FH     0001H     UNIT         ?DT?_TRAFFIC_SETCOLOR?TRAFFIC
+            IDATA   0060H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0028H                  *** GAP ***
+            CODE    002BH     0003H     ABSOLUTE     
+                    002EH     07D2H                  *** GAP ***
+            CODE    0800H     025EH     UNIT         ?C?LIB_CODE
+            CODE    0A5EH     0092H     UNIT         ?PR?CUTEOS_ISR?CUTEOS
+            CODE    0AF0H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0B7CH     0087H     UNIT         ?PR?_CUTEOS_TASKREMOVE?CUTEOS
+            CODE    0C03H     0069H     UNIT         ?PR?_TRAFFIC_GENERICSEQUENCE?TRAFFIC
+            CODE    0C6CH     005BH     UNIT         ?PR?_CUTEOS_TASKCREATE?CUTEOS
+            CODE    0CC7H     0057H     UNIT         ?C_INITSEG
+            CODE    0D1EH     003AH     UNIT         ?PR?CUTEOS_INIT?CUTEOS
+            CODE    0D58H     002FH     UNIT         ?PR?TRAFFIC_UPDATE?TRAFFIC
+            CODE    0D87H     0018H     UNIT         ?PR?MAIN?MAIN
+            CODE    0D9FH     0016H     UNIT         ?PR?_CUTEOS_GETTICKTIME?CUTEOS
+            CODE    0DB5H     0014H     UNIT         ?PR?_CUTEOS_SETTICKTIME?CUTEOS
+            CODE    0DC9H     0014H     UNIT         ?PR?TRAFFIC_REDAMBERSEQUENCE?TRAFFIC
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 2
+
+
+            CODE    0DDDH     0013H     UNIT         ?PR?TRAFFIC_REDSEQUENCE?TRAFFIC
+            CODE    0DF0H     0013H     UNIT         ?PR?TRAFFIC_GREENSEQUENCE?TRAFFIC
+            CODE    0E03H     0013H     UNIT         ?PR?TRAFFIC_AMBERSEQUENCE?TRAFFIC
+            CODE    0E16H     000FH     UNIT         ?PR?TRAFFIC_INIT?TRAFFIC
+            CODE    0E25H     000EH     UNIT         ?PR?_TRAFFIC_SETCOLOR?TRAFFIC
+            CODE    0E33H     0009H     UNIT         ?PR?TRAFFIC_DEINIT?TRAFFIC
+            CODE    0E3CH     0007H     UNIT         ?PR?_TRAFFIC_GETCOLOR?TRAFFIC
+            CODE    0E43H     0005H     UNIT         ?PR?CUTEOS_START?CUTEOS
+            CODE    0E48H     0004H     UNIT         ?PR?CUTEOS_SLEEP?CUTEOS
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\traffic_lights (?C_STARTUP)
+
+
+SEGMENT                                        DATA_GROUP 
+  +--> CALLED SEGMENT                        START    LENGTH
+------------------------------------------------------------
+?C_C51STARTUP                                -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                                -----    -----
+  +--> ?PR?CUTEOS_INIT?CUTEOS
+  +--> ?PR?TRAFFIC_INIT?TRAFFIC
+  +--> ?PR?TRAFFIC_UPDATE?TRAFFIC
+  +--> ?PR?_CUTEOS_TASKCREATE?CUTEOS
+  +--> ?PR?CUTEOS_START?CUTEOS
+
+?PR?CUTEOS_INIT?CUTEOS                       0048H    0005H
+
+?PR?TRAFFIC_UPDATE?TRAFFIC                   0048H    0001H
+  +--> ?PR?TRAFFIC_REDSEQUENCE?TRAFFIC
+  +--> ?PR?TRAFFIC_REDAMBERSEQUENCE?TRAFFIC
+  +--> ?PR?TRAFFIC_GREENSEQUENCE?TRAFFIC
+  +--> ?PR?TRAFFIC_AMBERSEQUENCE?TRAFFIC
+
+?PR?TRAFFIC_REDSEQUENCE?TRAFFIC              0049H    0001H
+  +--> ?PR?_TRAFFIC_GENERICSEQUENCE?TRAFFIC
+
+?PR?_TRAFFIC_GENERICSEQUENCE?TRAFFIC         004AH    0005H
+
+?PR?TRAFFIC_REDAMBERSEQUENCE?TRAFFIC         0049H    0001H
+  +--> ?PR?_TRAFFIC_GENERICSEQUENCE?TRAFFIC
+
+?PR?TRAFFIC_GREENSEQUENCE?TRAFFIC            0049H    0001H
+  +--> ?PR?_TRAFFIC_GENERICSEQUENCE?TRAFFIC
+
+?PR?TRAFFIC_AMBERSEQUENCE?TRAFFIC            0049H    0001H
+  +--> ?PR?_TRAFFIC_GENERICSEQUENCE?TRAFFIC
+
+?PR?_CUTEOS_TASKCREATE?CUTEOS                0048H    0004H
+
+?PR?CUTEOS_START?CUTEOS                      -----    -----
+  +--> ?PR?CUTEOS_SLEEP?CUTEOS
+
+*** NEW ROOT ***************************************************
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 3
+
+
+
+?PR?CUTEOS_ISR?CUTEOS                        004FH    0001H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\traffic_lights (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0AF0H         SEGMENT       ?C_C51STARTUP
+  I:0060H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0AF3H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0AF0H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0AF0H         LINE#         133
+  C:0AF2H         LINE#         134
+  C:0AF3H         LINE#         135
+  C:0AF4H         LINE#         136
+  C:0AF6H         LINE#         185
+  C:0AF9H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        CUTEOS
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:0DB5H         PUBLIC        _cuteOS_SetTickTime
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  D:0008H         SYMBOL        cuteOS_TickTimeMs
+  D:00B8H         PUBLIC        IP
+  D:00CBH         PUBLIC        RCAP2H
+  C:0C6CH         PUBLIC        _cuteOS_TaskCreate
+  C:0A5EH         SYMBOL        cuteOS_ISR
+  D:00CAH         PUBLIC        RCAP2L
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 4
+
+
+  D:0009H         PUBLIC        tasks
+  D:0087H         PUBLIC        PCON
+  D:0045H         SYMBOL        cuteOS_TaskCounter
+  C:0E48H         SYMBOL        cuteOS_Sleep
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0B7CH         PUBLIC        _cuteOS_TaskRemove
+  C:0E43H         PUBLIC        cuteOS_Start
+  B:00A8H.5       PUBLIC        ET2
+  B:00C8H.7       PUBLIC        TF2
+  C:0D1EH         PUBLIC        cuteOS_Init
+  D:00CDH         PUBLIC        TH2
+  D:0046H         SYMBOL        cuteOS_TickCount
+  D:00CCH         PUBLIC        TL2
+  B:00C8H.2       PUBLIC        TR2
+  D:00C8H         PUBLIC        T2CON
+  C:0D9FH         PUBLIC        _cuteOS_GetTickTime
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          CUTEOS_ISR
+  -------         DO            
+  D:004FH         SYMBOL        i
+  -------         ENDDO         
+  C:0A5EH         LINE#         81
+  C:0A7BH         LINE#         82
+  C:0A7EH         LINE#         85
+  C:0A80H         LINE#         88
+  C:0A88H         LINE#         91
+  C:0A92H         LINE#         92
+  C:0AABH         LINE#         97
+  C:0ABFH         LINE#         98
+  C:0AD1H         LINE#         99
+  C:0AD1H         LINE#         100
+  C:0AD1H         LINE#         101
+  C:0AD5H         LINE#         102
+  -------         ENDPROC       CUTEOS_ISR
+  -------         PROC          CUTEOS_SLEEP
+  C:0E48H         LINE#         110
+  C:0E48H         LINE#         112
+  C:0E4BH         LINE#         113
+  -------         ENDPROC       CUTEOS_SLEEP
+  -------         PROC          _CUTEOS_TASKCREATE
+  D:0048H         SYMBOL        callback
+  D:0006H         SYMBOL        TICK_MS
+  -------         DO            
+  D:004BH         SYMBOL        error
+  -------         ENDDO         
+  C:0C6CH         LINE#         126
+  C:0C76H         LINE#         127
+  C:0C79H         LINE#         129
+  C:0C7BH         LINE#         131
+  C:0C86H         LINE#         132
+  C:0C89H         LINE#         133
+  C:0C8BH         LINE#         134
+  C:0C9AH         LINE#         135
+  C:0CAFH         LINE#         136
+  C:0CC4H         LINE#         137
+  C:0CC4H         LINE#         139
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 5
+
+
+  C:0CC6H         LINE#         140
+  -------         ENDPROC       _CUTEOS_TASKCREATE
+  -------         PROC          _CUTEOS_TASKREMOVE
+  D:0050H         SYMBOL        callback
+  -------         DO            
+  D:0053H         SYMBOL        error
+  D:0054H         SYMBOL        i
+  -------         ENDDO         
+  C:0B7CH         LINE#         152
+  C:0B82H         LINE#         153
+  C:0B85H         LINE#         154
+  C:0B88H         LINE#         157
+  C:0B91H         LINE#         158
+  C:0BB7H         LINE#         159
+  C:0BB9H         LINE#         161
+  C:0BC3H         LINE#         162
+  C:0BE3H         LINE#         163
+  C:0BE7H         LINE#         165
+  C:0BF8H         LINE#         168
+  C:0BFAH         LINE#         169
+  C:0BFCH         LINE#         170
+  C:0BFCH         LINE#         171
+  C:0C00H         LINE#         173
+  C:0C02H         LINE#         174
+  -------         ENDPROC       _CUTEOS_TASKREMOVE
+  -------         PROC          CUTEOS_START
+  C:0E43H         LINE#         179
+  C:0E43H         LINE#         181
+  C:0E43H         LINE#         182
+  C:0E46H         LINE#         183
+  -------         ENDPROC       CUTEOS_START
+  -------         PROC          _CUTEOS_SETTICKTIME
+  D:0007H         SYMBOL        TICK_MS
+  -------         DO            
+  D:0006H         SYMBOL        error
+  -------         ENDDO         
+  C:0DB5H         LINE#         191
+  C:0DB5H         LINE#         192
+  C:0DB5H         LINE#         194
+  C:0DB7H         LINE#         196
+  C:0DC1H         LINE#         197
+  C:0DC1H         LINE#         198
+  C:0DC3H         LINE#         200
+  C:0DC6H         LINE#         201
+  C:0DC6H         LINE#         203
+  C:0DC8H         LINE#         204
+  -------         ENDPROC       _CUTEOS_SETTICKTIME
+  -------         PROC          _CUTEOS_GETTICKTIME
+  D:0059H         SYMBOL        tickTimeInMsPtr
+  -------         DO            
+  D:0007H         SYMBOL        error
+  -------         ENDDO         
+  C:0D9FH         LINE#         209
+  C:0DA5H         LINE#         210
+  C:0DA7H         LINE#         212
+  C:0DACH         LINE#         213
+  C:0DB1H         LINE#         214
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 6
+
+
+  C:0DB1H         LINE#         215
+  C:0DB4H         LINE#         216
+  C:0DB4H         LINE#         218
+  C:0DB4H         LINE#         219
+  -------         ENDPROC       _CUTEOS_GETTICKTIME
+  -------         PROC          CUTEOS_INIT
+  -------         DO            
+  D:0048H         SYMBOL        error
+  D:0049H         SYMBOL        Inc
+  D:0004H         SYMBOL        Reload_16
+  D:0007H         SYMBOL        Reload_08H
+  D:0006H         SYMBOL        Reload_08L
+  -------         ENDDO         
+  C:0D1EH         LINE#         228
+  C:0D1EH         LINE#         229
+  C:0D21H         LINE#         234
+  C:0D23H         LINE#         240
+  C:0D26H         LINE#         248
+  C:0D41H         LINE#         251
+  C:0D47H         LINE#         254
+  C:0D47H         LINE#         255
+  C:0D47H         LINE#         260
+  C:0D4BH         LINE#         261
+  C:0D4FH         LINE#         263
+  C:0D51H         LINE#         264
+  C:0D53H         LINE#         265
+  C:0D55H         LINE#         267
+  C:0D57H         LINE#         268
+  -------         ENDPROC       CUTEOS_INIT
+  -------         ENDMOD        CUTEOS
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0D87H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0D87H         LINE#         42
+  C:0D87H         LINE#         44
+  C:0D8AH         LINE#         45
+  C:0D8DH         LINE#         48
+  C:0D9AH         LINE#         51
+  C:0D9DH         LINE#         54
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        TRAFFIC
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:0E3CH         PUBLIC        _TRAFFIC_GetColor
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 7
+
+
+  C:0E03H         SYMBOL        TRAFFIC_AmberSequence
+  D:00A8H         PUBLIC        IE
+  C:0E25H         PUBLIC        _TRAFFIC_SetColor
+  C:0DF0H         SYMBOL        TRAFFIC_GreenSequence
+  D:00B8H         PUBLIC        IP
+  C:0E33H         PUBLIC        TRAFFIC_DeInit
+  C:0DC9H         SYMBOL        TRAFFIC_RedAmberSequence
+  B:0090H.1       PUBLIC        amberPin
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:0090H.2       PUBLIC        greenPin
+  C:0DDDH         SYMBOL        TRAFFIC_RedSequence
+  C:0D58H         PUBLIC        TRAFFIC_Update
+  D:005CH         SYMBOL        colorSequence
+  C:0C03H         SYMBOL        _TRAFFIC_GenericSequence
+  B:0090H.0       PUBLIC        redPin
+  D:00C8H         PUBLIC        T2CON
+  D:005DH         SYMBOL        timeInState
+  C:0E16H         PUBLIC        TRAFFIC_Init
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          TRAFFIC_INIT
+  -------         DO            
+  D:0007H         SYMBOL        error
+  -------         ENDDO         
+  C:0E16H         LINE#         47
+  C:0E16H         LINE#         48
+  C:0E18H         LINE#         51
+  C:0E1CH         LINE#         54
+  C:0E1EH         LINE#         55
+  C:0E20H         LINE#         56
+  C:0E22H         LINE#         57
+  C:0E24H         LINE#         59
+  C:0E24H         LINE#         60
+  -------         ENDPROC       TRAFFIC_INIT
+  -------         PROC          TRAFFIC_DEINIT
+  -------         DO            
+  D:0007H         SYMBOL        error
+  -------         ENDDO         
+  C:0E33H         LINE#         67
+  C:0E33H         LINE#         68
+  C:0E35H         LINE#         71
+  C:0E37H         LINE#         72
+  C:0E39H         LINE#         73
+  C:0E3BH         LINE#         78
+  C:0E3BH         LINE#         79
+  -------         ENDPROC       TRAFFIC_DEINIT
+  -------         PROC          TRAFFIC_UPDATE
+  -------         DO            
+  D:0048H         SYMBOL        error
+  -------         ENDDO         
+  C:0D58H         LINE#         89
+  C:0D58H         LINE#         90
+  C:0D5BH         LINE#         93
+  C:0D6AH         LINE#         94
+  C:0D6AH         LINE#         95
+  C:0D6DH         LINE#         96
+  C:0D6FH         LINE#         97
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 8
+
+
+  C:0D6FH         LINE#         98
+  C:0D72H         LINE#         99
+  C:0D74H         LINE#         100
+  C:0D74H         LINE#         101
+  C:0D77H         LINE#         102
+  C:0D79H         LINE#         103
+  C:0D79H         LINE#         104
+  C:0D7FH         LINE#         105
+  C:0D81H         LINE#         106
+  C:0D81H         LINE#         107
+  C:0D84H         LINE#         108
+  C:0D84H         LINE#         109
+  C:0D84H         LINE#         111
+  C:0D86H         LINE#         112
+  -------         ENDPROC       TRAFFIC_UPDATE
+  -------         PROC          _TRAFFIC_SETCOLOR
+  D:0007H         SYMBOL        Copy_color
+  -------         DO            
+  D:005FH         SYMBOL        error
+  -------         ENDDO         
+  C:0E25H         LINE#         115
+  C:0E25H         LINE#         116
+  C:0E28H         LINE#         117
+  C:0E2AH         LINE#         119
+  C:0E30H         LINE#         121
+  C:0E32H         LINE#         122
+  -------         ENDPROC       _TRAFFIC_SETCOLOR
+  -------         PROC          _TRAFFIC_GETCOLOR
+  D:0001H         SYMBOL        Copy_color
+  -------         DO            
+  D:0007H         SYMBOL        error
+  -------         ENDDO         
+  C:0E3CH         LINE#         124
+  C:0E3CH         LINE#         125
+  C:0E3EH         LINE#         127
+  -------         ENDPROC       _TRAFFIC_GETCOLOR
+  -------         PROC          TRAFFIC_REDSEQUENCE
+  -------         DO            
+  D:0049H         SYMBOL        error
+  -------         ENDDO         
+  C:0DDDH         LINE#         145
+  C:0DDDH         LINE#         146
+  C:0DE0H         LINE#         148
+  C:0DEDH         LINE#         150
+  C:0DEFH         LINE#         151
+  -------         ENDPROC       TRAFFIC_REDSEQUENCE
+  -------         PROC          TRAFFIC_REDAMBERSEQUENCE
+  -------         DO            
+  D:0049H         SYMBOL        error
+  -------         ENDDO         
+  C:0DC9H         LINE#         158
+  C:0DC9H         LINE#         159
+  C:0DCCH         LINE#         161
+  C:0DDAH         LINE#         163
+  C:0DDCH         LINE#         164
+  -------         ENDPROC       TRAFFIC_REDAMBERSEQUENCE
+  -------         PROC          TRAFFIC_GREENSEQUENCE
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 9
+
+
+  -------         DO            
+  D:0049H         SYMBOL        error
+  -------         ENDDO         
+  C:0DF0H         LINE#         171
+  C:0DF0H         LINE#         172
+  C:0DF3H         LINE#         174
+  C:0E00H         LINE#         176
+  C:0E02H         LINE#         177
+  -------         ENDPROC       TRAFFIC_GREENSEQUENCE
+  -------         PROC          TRAFFIC_AMBERSEQUENCE
+  -------         DO            
+  D:0049H         SYMBOL        error
+  -------         ENDDO         
+  C:0E03H         LINE#         184
+  C:0E03H         LINE#         185
+  C:0E06H         LINE#         187
+  C:0E13H         LINE#         189
+  C:0E15H         LINE#         190
+  -------         ENDPROC       TRAFFIC_AMBERSEQUENCE
+  -------         PROC          _TRAFFIC_GENERICSEQUENCE
+  D:004AH         SYMBOL        redState
+  D:0001H         SYMBOL        amberState
+  D:0003H         SYMBOL        greenState
+  D:004DH         SYMBOL        duration
+  -------         DO            
+  D:0007H         SYMBOL        error
+  D:004EH         SYMBOL        tickTime
+  -------         ENDDO         
+  C:0C03H         LINE#         215
+  C:0C07H         LINE#         216
+  C:0C09H         LINE#         217
+  C:0C0BH         LINE#         220
+  C:0C1EH         LINE#         221
+  C:0C23H         LINE#         222
+  C:0C32H         LINE#         223
+  C:0C32H         LINE#         224
+  C:0C35H         LINE#         225
+  C:0C37H         LINE#         226
+  C:0C37H         LINE#         227
+  C:0C37H         LINE#         228
+  C:0C39H         LINE#         229
+  C:0C39H         LINE#         230
+  C:0C3CH         LINE#         231
+  C:0C3EH         LINE#         232
+  C:0C40H         LINE#         233
+  C:0C42H         LINE#         234
+  C:0C43H         LINE#         235
+  C:0C43H         LINE#         236
+  C:0C46H         LINE#         237
+  C:0C48H         LINE#         238
+  C:0C4AH         LINE#         239
+  C:0C4CH         LINE#         240
+  C:0C4DH         LINE#         241
+  C:0C4DH         LINE#         242
+  C:0C50H         LINE#         243
+  C:0C52H         LINE#         244
+  C:0C54H         LINE#         245
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 10
+
+
+  C:0C56H         LINE#         246
+  C:0C57H         LINE#         247
+  C:0C57H         LINE#         248
+  C:0C5AH         LINE#         249
+  C:0C5BH         LINE#         250
+  C:0C5BH         LINE#         251
+  C:0C5BH         LINE#         252
+  C:0C61H         LINE#         253
+  C:0C66H         LINE#         254
+  C:0C6BH         LINE#         255
+  C:0C6BH         LINE#         257
+  C:0C6BH         LINE#         258
+  -------         ENDPROC       _TRAFFIC_GENERICSEQUENCE
+  -------         ENDMOD        TRAFFIC
+
+  -------         MODULE        TRAFFIC_CFG
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0055H         PUBLIC        TRAFFIC_Configs
+  -------         ENDMOD        TRAFFIC_CFG
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?CSTPTR
+  C:08F6H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?UIDIV
+  C:0908H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?ULDIV
+  C:0999H         PUBLIC        ?C?ULDIV
+  -------         ENDMOD        ?C?ULDIV
+
+  -------         MODULE        ?C?ICALL
+  C:0A2BH         PUBLIC        ?C?ICALL
+  C:0A2FH         PUBLIC        ?C?ICALL2
+  -------         ENDMOD        ?C?ICALL
+
+  -------         MODULE        ?C?LIMUL
+  C:0A31H         PUBLIC        ?C?LIMUL
+  -------         ENDMOD        ?C?LIMUL
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CUTEOS_TASKREMOVE?CUTEOS
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CUTEOS_SETTICKTIME?CUTEOS
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CUTEOS_GETTICKTIME?CUTEOS
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TRAFFIC_DEINIT?TRAFFIC
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2022  01:44:54  PAGE 11
+
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_TRAFFIC_SETCOLOR?TRAFFIC
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_TRAFFIC_GETCOLOR?TRAFFIC
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0373H BYTE (43%) *
+******************************************************************************
+
+Program Size: data=97.0 xdata=0 code=1618
+LINK/LOCATE RUN COMPLETE.  6 WARNING(S),  0 ERROR(S)

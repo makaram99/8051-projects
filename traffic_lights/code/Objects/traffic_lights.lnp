@@ -1,0 +1,7 @@
+".\Objects\STARTUP.obj",
+".\Objects\cuteOS.obj",
+".\Objects\main.obj",
+".\Objects\traffic.obj",
+".\Objects\traffic_cfg.obj" 
+TO ".\Objects\traffic_lights" 
+PRINT(".\Listings\traffic_lights.m51") RAMSIZE(256) 

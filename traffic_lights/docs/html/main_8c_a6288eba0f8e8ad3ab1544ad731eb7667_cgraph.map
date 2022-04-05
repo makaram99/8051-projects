@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,117,69,149"/>
+<area shape="rect" id="node2" href="$cute_o_s_8h.html#a538cb1529929abdc516dbc5a23bf41fd" title="Sets up Timer 2 to drive the simple EOS." alt="" coords="155,5,278,37"/>
+<area shape="rect" id="node3" href="$cute_o_s_8h.html#a90f66f4ffbd452ceb65c8968caada76f" title="The OS enters &#39;idle mode&#39; between clock ticks to save power." alt="" coords="147,61,286,93"/>
+<area shape="rect" id="node4" href="$cute_o_s_8h.html#a7d3052acc66fae6a67b7cf7ccbf3d8d4" title="Create a task with the given task function and the given tick time." alt="" coords="117,117,316,149"/>
+<area shape="rect" id="node5" href="$traffic_8h.html#aec307edaf66438346ef2f2a23e961ccb" title="Initialize the traffic light system to RED state." alt="" coords="147,173,287,205"/>
+<area shape="rect" id="node6" href="$traffic_8h.html#aac30159179227db868e8343ffc3ba333" title="Update the traffic light system to the next state." alt="" coords="127,229,306,261"/>
+</map>
